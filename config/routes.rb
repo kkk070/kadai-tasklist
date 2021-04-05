@@ -8,8 +8,7 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create]
-  
+  resources :tasks, only: [:create, :destroy]
   resources :tasks
-  root to: 'toppages#index'
   
 end
